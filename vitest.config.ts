@@ -1,9 +1,11 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
-import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react()],
+  resolve: {
+    tsconfigPaths: true,
+  },
   test: {
     environment: 'node',
     globals: true,
@@ -14,7 +16,6 @@ export default defineConfig({
       include: ['src/server/**', 'src/lib/**'],
       thresholds: {
         // 100% branch coverage required on these critical files (TESTING.md)
-        // enforced per-file in individual test suites
       },
     },
   },

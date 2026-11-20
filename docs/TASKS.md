@@ -8,8 +8,8 @@ Phases match the roadmap: Foundation (weeks 1–2) → Reporter flow (3–4) →
 
 ## Phase 1 — Foundation (weeks 1–2)
 
-- [ ] **T-001 Project setup.** Create Next.js (App Router, TypeScript strict), Tailwind, shadcn/ui, ESLint, Prettier. Add the npm scripts listed in `AGENTS.md`. Create folder structure from `ARCHITECTURE.md`. Add `.env.example` and `src/lib/env.ts` (Zod-validated).
-- [ ] **T-002 CI.** GitHub Actions workflow: install, lint, typecheck, test, build on pull requests. Add `npm audit --omit=dev` step.
+- [x] **T-001 Project setup.** Create Next.js (App Router, TypeScript strict), Tailwind, shadcn/ui, ESLint, Prettier. Add the npm scripts listed in `AGENTS.md`. Create folder structure from `ARCHITECTURE.md`. Add `.env.example` and `src/lib/env.ts` (Zod-validated). *(Completed: layout font fixed to system stack, shadcn/ui initialized with core primitives button/card/badge/input, vitest ESM config resolved, lint/typecheck/test/build all passing).*
+- [x] **T-002 CI.** GitHub Actions workflow: install, lint, typecheck, test, build on pull requests. Add `npm audit --omit=dev` step. *(Completed: created .github/workflows/ci.yml with Node 20, npm caching, npm ci, npm audit --omit=dev, lint, typecheck, test, and build).*
 - [ ] **T-003 Database.** Add Prisma, paste schema from `DATA_MODEL.md`, run first migration. Add `src/lib/db.ts` singleton.
 - [ ] **T-004 Seed.** Implement idempotent `prisma/seed.ts` per `DATA_MODEL.md`.
 - [ ] **T-005 Auth.** Auth.js with Google and Microsoft, Prisma adapter, domain restriction, default role `REPORTER`, `getSessionUser()` helper, inactive-user block.
