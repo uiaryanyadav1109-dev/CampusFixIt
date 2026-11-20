@@ -25,15 +25,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [],
   },
 
-  // ---- Tailwind CSS via turbopack ----
-  turbopack: {
-    rules: {
-      '*.css': {
-        loaders: ['@tailwindcss/turbopack'],
-        as: '*.css',
-      },
-    },
-  },
+
 }
 
 export default nextConfig

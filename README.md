@@ -43,6 +43,16 @@ npm run db:seed      # Seed initial data
 npm run db:studio    # Prisma Studio GUI
 ```
 
+## Continuous Integration
+
+A GitHub Actions workflow (`.github/workflows/ci.yml`) runs on every push and pull request to `main`, and can also be triggered manually (`workflow_dispatch`). It executes:
+1. **Dependency Installation:** Reproducible `npm ci` with Node 20 LTS and npm caching.
+2. **Security Audit:** `npm audit --omit=dev` to verify zero production vulnerabilities.
+3. **Linting:** `npm run lint` (ESLint).
+4. **Type Checking:** `npm run typecheck` (`tsc --noEmit`).
+5. **Testing:** `npm run test` (Vitest).
+6. **Production Build:** `npm run build` (`next build`).
+
 ## Documentation
 
 Full project specifications are maintained in the `docs/` directory:
